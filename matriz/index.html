@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <title>Matriz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+        body {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: gray;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: fixed;
+            border-collapse:collapse;
+            border: none;
+            width: 80%;  
+            padding: 2em;
+            margin-bottom: 1em;
+        }
+        td {
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            transition: background-color .5s;
+        }
+        tr {
+            height: 2em;
+        }
+
+        button {
+            background-color: lightseagreen;
+            font-family: 'Roboto', sans-serif;
+            border: none;
+            border-radius: 5px;
+            width: 10em;
+            height: 3em;
+        }
+
+        .disabledSelected {
+            background-color: lightcoral;
+            transition: background-color .8s;
+        }
+        .disabled {
+            background-color: burlywood;
+            transition: background-color .8s;
+        }
+
+        td:hover {
+            background-color: lightgray;
+        }
+
+        button:hover {
+            background-color: seagreen;
+            box-shadow: 5px 5px 5px gray;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px){
+            tr {
+                height: 1em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Matriz</h1>
+    
+    <div>
+        <table id="matriz">
+            
+        </table>
+    </div>
+    
+    <div>
+        <button onclick="resetAll()">Reset</button>
+        <button onclick="random()">Random</button>
+        <h4 id="numberRandom"></h4>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+</body>
+</html>
